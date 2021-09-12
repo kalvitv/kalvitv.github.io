@@ -25,6 +25,9 @@ jobs:
         npm install --save-dev gulp-uglify
         npm install --save-dev gulp-concat
         gulp
+        ls
+        cd assets/js
+        ls
     
     - name: Build the site in the jekyll/builder container
       run: |
