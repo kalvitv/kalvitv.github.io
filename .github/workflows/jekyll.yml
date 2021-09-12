@@ -21,7 +21,7 @@ jobs:
 
     - name: Build
       run: |
-        npm install
+        npm install --save-dev gulp
         gulp
     
     - name: Build the site in the jekyll/builder container
