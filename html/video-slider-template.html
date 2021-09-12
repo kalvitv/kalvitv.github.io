@@ -1,0 +1,26 @@
+<div class="position-relative video-slider-wrap" ng-if="$ctrl.vii.length > 0">
+    <svg ng-if="$ctrl.getPFlag()" ng-click="$ctrl.getP()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+         fill="currentColor" class="bi bi-chevron-left nav-btn position-absolute top-50 start-0 d-none d-lg-block" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+    </svg>
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+        <div ng-repeat="vid in $ctrl.vii" class="col" ng-if="vid.IsActive" >
+            <div class="card shadow-sm">
+                <a href="https://www.youtube.com/watch?v={{vid.id}}">
+                    <img ng-src="{{(vid.sThumbnail ? vid.sThumbnail : vid.thumbnail) }}" />
+                </a>
+                <div class="card-body">
+                    <p class="card-text">{{vid.topic}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small ng-if="vid.duration" class="text-muted">{{vid.duration + "mins"}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <svg ng-if="$ctrl.getNFlag()" ng-click="$ctrl.getN(false)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-chevron-right nav-btn position-absolute top-50 end-0 d-none d-lg-block" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+    <div ng-if="$ctrl.getNFlag()" ng-click="$ctrl.getN(true)" class="d-block mt-4 text-center p-2 bg-primary text-white d-lg-none">More</div>
+</div>

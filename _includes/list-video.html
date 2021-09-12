@@ -1,0 +1,17 @@
+<div ng-app="kalvi-app">
+    <p class="h5">
+        <span class="badge rounded-pill bg-warning text-dark">{{page.classno}}</span>
+    </p>  
+    <div ng-controller="classController as ct" ng-init="classNo = '{{page.classno}}'" >
+        <div ng-repeat="sub in ct.subject" ng-if="ct.subjectVideos[$index].length > 0" >            
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <p class="h5">
+                        <span class="badge rounded-pill bg-primary" ng-bind="sub"></span>
+                    </p>
+                    <video-slider vii="ct.subjectVideos[$index]"></video-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

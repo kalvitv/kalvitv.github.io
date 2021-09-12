@@ -1,0 +1,26 @@
+.current {
+  color: green;
+}
+
+.nav-btn{
+  cursor: pointer;
+  z-index: 1;
+  border: 1px solid silver;
+  background-color: crimson;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.video-slider-wrap{
+  div.shadow-sm a img{
+    width: 100%;
+  }
+}
+
+.go-to-top{
+  cursor: pointer;
+  left: unset;
+  right: 30px;
+  bottom: 30px;
+}

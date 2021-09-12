@@ -1,0 +1,46 @@
+Class:
+  -
+    label: ஒன்றாம் வகுப்பு
+    number: 1st
+  -
+    label: இரண்டாம் வகுப்பு
+    number: 2nd
+  -
+    label: மூன்றாம்  வகுப்பு
+    number: 3rd
+  -
+    label: நாலாம் வகுப்பு
+    number: 4th
+  -
+    label: ஐந்தாம் வகுப்பு
+    number: 5th
+  -
+    label: ஆறாம் வகுப்பு
+    number: 6th
+  -
+    label: ஏழாம் வகுப்பு
+    number: 7th
+  -
+    label: எட்டாம் வகுப்பு
+    number: 8th
+  -
+    label: ஒன்பதாம் வகுப்பு
+    number: 9th
+  -
+    label: பத்தாம் வகுப்பு
+    number: 10th
+  -
+    label: பதினொன்னாம் வகுப்பு
+    number: 11th
+  -
+    label: பன்னிரெண்டாம் வகுப்பு
+    number: 12th
+  -
+    label: நீட் தேர்வு
+    number: neet
+  -
+    label: ஜேஈஈ தேர்வு
+    number: jee
+  -
+    label: மற்றவை
+    number: other

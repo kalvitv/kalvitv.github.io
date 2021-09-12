@@ -1,0 +1,28 @@
+---
+layout: default
+title: Home
+colors: ['btn-primary','btn-secondary','btn-success','btn-danger','btn-warning text-dark','btn-info text-dark','btn-dark']
+---
+{% assign idx = 0 %}
+
+<div class="container mt-5">
+  <div class="row">
+    <p>இன்று நீங்கள் எந்த வகுப்பு பாடத்தை கற்றுக்கொள்ள விரும்புகிறீர்கள்?</p>
+  </div>  
+  <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 mt-3">    
+    {% for classData in site.data.main.Class %}
+    <div class="col text-center mt-1">
+    <h4>
+      <span> 
+        <a class="d-block btn {{ page.colors[idx]  }}" href="{{ '/class/' | append: classData.number | relative_url }}">{{ classData.label }}</a>
+      </span>
+    </h4>
+    </div>
+    {% if idx > 5 %}
+      {% assign idx = 0 %}
+    {% else %}
+      {% assign idx = idx | plus: 1 %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
