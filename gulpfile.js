@@ -1,6 +1,6 @@
 const { src, dest } = require('gulp');
 const uglify = require('gulp-uglify');
-const { rollup } = require('gulp-rollup');
+const rollup = require('gulp-rollup');
 
 exports.default = function() {
   return src('assets/js/*.js')
