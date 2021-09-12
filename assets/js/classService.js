@@ -7,7 +7,7 @@ app.service("classService", function($q, $http){
         GetAllVideos : function(cno){
             var deferred = $q.defer();
 
-            $http({ method: 'GET',  url: '/kalvi/videos/'+ cno +'.json' })
+            $http({ method: 'GET',  url: '/videos/'+ cno +'.json' })
             .then(function (response) {
                 deferred.resolve(response.data);
             },
