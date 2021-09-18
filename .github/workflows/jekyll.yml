@@ -13,18 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16
-
     - name: Build
       run: |
-        npm install --save-dev gulp
-        npm install --save-dev gulp-uglify
-        npm install --save-dev gulp-concat
-        gulp
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
