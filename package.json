@@ -20,7 +20,8 @@
   "homepage": "https://github.com/kalvitv/kalvitv.github.io#readme",
   "dependencies": {
     "gulp": "*",
-    "gulp-uglify": "*",
-    "gulp-concat": "*"
+    "gulp-babel": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*"
   }
 }
