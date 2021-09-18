@@ -19,7 +19,10 @@ function showVideo(videoId){
       width: '100%',
       videoId: videoId,
       playerVars: {
-        'playsinline': 1
+        'playsinline': 1,
+        'origin': 'https://kalvitv.github.io',
+        'modestbranding': 1,
+        'color': 'white'
       },
       events: {
         'onReady': function (event) { event.target.playVideo(); }
