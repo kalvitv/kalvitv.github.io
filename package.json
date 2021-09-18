@@ -1,0 +1,26 @@
+{
+  "name": "kalvitv.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "githttps://github.com/kalvitv/kalvitv.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalvitv/kalvitv.github.io/issues"
+  },
+  "homepage": "https://github.com/kalvitv/kalvitv.github.io#readme",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-uglify": "*",
+    "gulp-concat": "*"
+  }
+}
