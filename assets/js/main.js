@@ -29,7 +29,7 @@ function showVideo(videoId){
    var myModal = new bootstrap.Modal(document.getElementById('videomodal'));
    myModal.show();
    
-   myModal.addEventListener('hidden.bs.modal', function (event) {
+   myModal.on('hidden.bs.modal', function (event) {
       player.stopVideo();
    });
 }
