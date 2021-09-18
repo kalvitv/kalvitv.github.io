@@ -25,11 +25,11 @@ function showVideo(videoId){
         'onReady': function (event) { event.target.playVideo(); }
       }
    });
-   
-   var myModal = new bootstrap.Modal(document.getElementById('videomodal'));
+   var mm = document.getElementById('videomodal');
+   var myModal = new bootstrap.Modal(mm);
    myModal.show();
    
-   myModal.on('hidden.bs.modal', function (event) {
+   mm.addEventListener('hide.bs.modal', function (event) {
       player.stopVideo();
    });
 }
