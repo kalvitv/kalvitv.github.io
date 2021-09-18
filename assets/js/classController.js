@@ -159,7 +159,7 @@ app.controller("classController", ["$scope", "classService", "$sce", "$timeout",
             
             
             videos = data;
-            //console.log("total:", videos.length);
+            console.log("total:", videos.length);
             for(let i=0; i<vm.subject.length; i++){
                 vm.subjectVideos.push(vm.getVideo(i));
             }

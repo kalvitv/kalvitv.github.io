@@ -9,5 +9,5 @@ exports.default = function() {
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat('kalvi-app.js'))    
-    .pipe(dest('assets/js/'));
+    .pipe(dest('assets/bundle/js/'));
 }

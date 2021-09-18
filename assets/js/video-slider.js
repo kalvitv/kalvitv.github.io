@@ -70,7 +70,7 @@ app.component('videoSlider', {
   bindings: {
       vii: '<'
   },
-  templateUrl: '/kalvi/html/video-slider-template.html',
+  templateUrl: '/html/video-slider-template.html',
   controller: ["$element", "$attrs", SliderController]
 });
     
