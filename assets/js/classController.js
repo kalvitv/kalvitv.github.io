@@ -2,7 +2,7 @@
 
 var app = ng.module('kalvi-app', []);
 
-app.controller("classController", function($scope, classService, $sce, $timeout){
+app.controller("classController", ["$scope", "classService", "$sce", "$timeout",function($scope, classService, $sce, $timeout){
     let vm = this;
     
     vm.subject = [];
@@ -167,6 +167,6 @@ app.controller("classController", function($scope, classService, $sce, $timeout)
     }, 900);
     
     
-});
+}]);
 
 })(angular);

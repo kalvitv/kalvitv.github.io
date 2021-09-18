@@ -2,7 +2,7 @@
 
 var app = ng.module('kalvi-app');
 
-app.service("classService", function($q, $http){
+app.service("classService", ["$q","$http",function($q, $http){
     return {
         GetAllVideos : function(cno){
             var deferred = $q.defer();
@@ -18,6 +18,6 @@ app.service("classService", function($q, $http){
             return deferred.promise;
         }
     };
-});
+}]);
 
 })(angular);

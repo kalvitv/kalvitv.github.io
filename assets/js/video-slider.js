@@ -71,7 +71,7 @@ app.component('videoSlider', {
       vii: '<'
   },
   templateUrl: '/kalvi/html/video-slider-template.html',
-  controller: SliderController
+  controller: ["$element", "$attrs", SliderController]
 });
     
     
