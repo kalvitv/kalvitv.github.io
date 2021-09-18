@@ -6,7 +6,7 @@
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
         <div ng-repeat="vid in $ctrl.vii" class="col" ng-if="vid.IsActive" >
             <div class="card shadow-sm">
-                <img ng-click="window.showVideo(vid.id)" ng-src="{{(vid.sThumbnail ? vid.sThumbnail : vid.thumbnail) }}" />
+                <img ng-click="$ctrl.showytvideo(vid.id)" ng-src="{{(vid.sThumbnail ? vid.sThumbnail : vid.thumbnail) }}" />
                 <div class="card-body">
                     <p class="card-text">{{vid.topic}}</p>
                     <div class="d-flex justify-content-between align-items-center">

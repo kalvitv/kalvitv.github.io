@@ -112,6 +112,8 @@ app.controller("classController", ["$scope", "classService", "$sce", "$timeout",
         return found;
     }
     
+    
+    
     $timeout(function () {      
         GetKeyWords(parseInt($scope.classNo));
         classService.GetAllVideos($scope.classNo)

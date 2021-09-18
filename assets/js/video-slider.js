@@ -50,6 +50,10 @@ function SliderController($element, $attrs) {
         return currentpage+1 <= totalpage;
     }
     
+    vm.showytvideo = function(vid){
+        window.showVideo(vid)
+    }  
+    
     function Empty(){
         for(let i=0; i< vm.videos.length; i++){
             vm.videos[i].IsActive = false;
