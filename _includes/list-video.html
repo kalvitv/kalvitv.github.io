@@ -22,7 +22,7 @@
       <div class="modal-body">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">நிறுத்து</button>
       </div>
     </div>
   </div>
@@ -31,3 +31,9 @@
 <p class="fixed-bottom mb-1 go-to-top">
   <span class="badge rounded-pill bg-warning text-dark">மேலே</span>
 </p>
+
+<div class="d-none">
+{% for videoData in site.data.videos[page.classno]%}
+{{videoData.topic}},
+{% endfor %}
+</div>
