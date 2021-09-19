@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Kalvi
-colors: ['btn-primary','btn-secondary','btn-success','btn-danger','btn-warning text-dark','btn-info text-dark','btn-dark']
 script: |
    <script src="/assets/js/main.js" ></script>
 ---
@@ -16,15 +15,11 @@ script: |
     <div class="col text-center mt-1">
     <h4>
       <span> 
-        <a class="d-block btn {{ page.colors[idx]  }}" href="{{ '/class/' | append: classData.number | relative_url }}">{{ classData.label }}</a>
+        <a class="d-block btn {% cycle 'btn-primary','btn-secondary','btn-success','btn-danger','btn-warning text-dark','btn-info text-dark','btn-dark' %}" 
+        href="{{ '/class/' | append: classData.number | relative_url }}">{{ classData.label }}</a>
       </span>
     </h4>
     </div>
-    {% if idx > 5 %}
-      {% assign idx = 0 %}
-    {% else %}
-      {% assign idx = idx | plus: 1 %}
-    {% endif %}
     {% endfor %}
   </div>
 </div>

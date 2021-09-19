@@ -47,7 +47,7 @@
       <div class="col-2">
         <ul class="nav flex-column">
           {% for item in site.data.main.Class limit:5 offset:0 %}    
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: classData.number | relative_url }}">
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: item.number | relative_url }}">
             {{ item.label }}</a></li>
           {% endfor %}
         </ul>
@@ -56,7 +56,7 @@
       <div class="col-2">
         <ul class="nav flex-column">
           {% for item in site.data.main.Class limit:5 offset:5 %}    
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: classData.number | relative_url }}">
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: item.number | relative_url }}">
             {{ item.label }}</a></li>
           {% endfor %}
         </ul>
@@ -65,7 +65,7 @@
       <div class="col-2">
         <ul class="nav flex-column">
           {% for item in site.data.main.Class limit:5 offset:10 %}    
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: classData.number | relative_url }}">
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: item.number | relative_url }}">
             {{ item.label }}</a></li>
           {% endfor %}
         </ul>
@@ -73,12 +73,7 @@
     </div>
 
     <div class="d-flex justify-content-between py-4 my-4 border-top">
-      <p>© 2021 Company, Inc. All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
+      <p>கடைசியாக {{ page.date | date: "%-d %B %Y" }} அன்று புதுப்பிக்கப்பட்டது</p>
     </div>
   </footer>
 </div>
