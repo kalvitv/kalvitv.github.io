@@ -36,7 +36,7 @@ app.controller("classController", ["$scope", "classService", "$sce", "$timeout",
         [["வேதியியல்"], []],
         [["பொருளியியல்"], []],
         [["ஊர்தி்", "ஊர்திபொறியியல்", "ஊர்திப்பொறியியல்", "தானியங்கி", "அடிப்படை ஊர்தி பொறியியல்"], []],
-        [["அடிப்படை மின்னணு பொறியியல்", "மின்னணுப்", "மின்னியல்", "மின்பொறியியல்", "மின்ணணுப்", "அடிப்படை மின் பொறியியல்", "மின்"], []],
+        [["அடிப்படை மின்னணு பொறியியல்", "மின்னணுப்", "மின்னியல்", "மின்பொறியியல்", "மின்ணணுப்", "அடிப்படை மின் பொறியியல்", "மின்"], ["இயந்திரவியல்"]],
         [["அடிப்படை இயந்திரவியல்", " அடிப்படை இயந்திரவியல்", "இயந்திரவியல்"], []],
         [["அடிப்படைகட்டிடபொறியியல்", "அடிப்படை கட்டட பொறியியல்", "அடிப்படை கட்டிட பொறியியல்", "கட்டிடப்", "அடிப்படை கட்டிப்பொறியியல்", "கட்டிட"], []],
         [["கணினி தொழில்", "கணினி பயன்பாடுகள்", "Computer", "கணினி", "கணினிதொழில்", "கணினிப்பயன்பாடு", "கணினித்தொழில்"], [" தமிழ்", "| English"]],
@@ -72,6 +72,7 @@ app.controller("classController", ["$scope", "classService", "$sce", "$timeout",
             let cvideo = videos[i];
             for(let j=0; j< sKey[subject][0].length; j++){
                 if(cvideo.topic.toLowerCase().indexOf(sKey[subject][0][j].toLowerCase()) > -1 && !NotThatOne(cvideo.topic, subject)){
+                    cvideo.classId = subject;
                     fvideo.push(cvideo);
                     break;
                 }
@@ -84,17 +85,7 @@ app.controller("classController", ["$scope", "classService", "$sce", "$timeout",
         let fvideo = [];
         for(let i=0; i<videos.length; i++){
             let cvideo = videos[i];
-            let found = false;
-            for(let k=0; k<sKey.length && !found; k++){
-                for(let j=0; j< sKey[k][0].length; j++){
-                    if(cvideo.topic.toLowerCase().indexOf(sKey[k][0][j].toLowerCase()) > -1  && !NotThatOne(cvideo.topic, k)){
-                        found = true;
-                        break;
-                    }
-                }
-            }
-
-            if(!found) {
+            if(!cvideo.classId) {
                 fvideo.push(cvideo);
             }
         }
