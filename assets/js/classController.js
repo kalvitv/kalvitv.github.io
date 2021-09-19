@@ -72,7 +72,7 @@ app.controller("classController", ["$scope", "classService", "$sce", "$timeout",
             let cvideo = videos[i];
             for(let j=0; j< sKey[subject][0].length; j++){
                 if(cvideo.topic.toLowerCase().indexOf(sKey[subject][0][j].toLowerCase()) > -1 && !NotThatOne(cvideo.topic, subject)){
-                    cvideo.classId = subject;
+                    cvideo.classId = subject+1;
                     fvideo.push(cvideo);
                     break;
                 }
