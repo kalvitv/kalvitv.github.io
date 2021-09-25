@@ -78,7 +78,7 @@ app.component('videoSlider', {
   controller: ["$element", "$attrs", SliderController]
 });
 
-app.filter("f-duration", function(){
+app.filter("fduration", function(){
     return function(input){
         return ((input/60).toFixed(2)) + " mins";
     };
