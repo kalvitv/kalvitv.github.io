@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <p class="card-text">{{vid.topic}}</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <small ng-if="vid.duration" class="text-muted">{{vid.duration + " mins"}}</small>
+                        <small ng-if="vid.duration" class="text-muted">{{vid.duration | f-duration}}</small>
                     </div>
                 </div>
             </div>
