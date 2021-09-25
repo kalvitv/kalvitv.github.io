@@ -44,3 +44,35 @@ Class:
   -
     label: மற்றவை
     number: other
+    
+ClassLabel:
+  1st:
+    label: ஒன்றாம் வகுப்பு
+  2nd:
+    label: இரண்டாம் வகுப்பு
+  3rd:
+    label: மூன்றாம்  வகுப்பு
+  4th:
+    label: நாலாம் வகுப்பு
+  5th:
+    label: ஐந்தாம் வகுப்பு
+  6th:
+    label: ஆறாம் வகுப்பு
+  7th:
+    label: ஏழாம் வகுப்பு
+  8th:
+    label: எட்டாம் வகுப்பு
+  9th:
+    label: ஒன்பதாம் வகுப்பு
+  10th:
+    label: பத்தாம் வகுப்பு
+  11th:
+    label: பதினொன்னாம் வகுப்பு
+  12th:
+    label: பன்னிரெண்டாம் வகுப்பு
+  neet:
+    label: நீட் தேர்வு
+  jee:
+    label: ஜேஈஈ தேர்வு
+  other:
+    label: மற்றவை
