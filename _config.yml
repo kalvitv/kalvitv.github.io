@@ -1,3 +1,7 @@
+lang: ta-IN
+google_site_verification: i3TSY3HYLI5mB30wmaoE13TDFRcQ7AU48Z1fc1mE-Jo
+locale: ta_IN
+
 plugins:
   - jekyll-seo-tag
   
