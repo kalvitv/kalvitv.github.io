@@ -4,6 +4,7 @@ locale: ta_IN
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
   
 collections:
   videos:
