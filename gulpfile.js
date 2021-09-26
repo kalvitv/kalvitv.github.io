@@ -6,30 +6,25 @@ const concat = require('gulp-concat');
 const YAML = require('yaml')
 
 function clean(cb) {
-  // body omitted
   cb();
 }
 
 function sitemap(cb) {
     let filenames = fs.readdirSync('_data/videos/');
     let moddt = {};
-    filenames.forEach((file) => {
-      console.log("File:", file);
-      let ss = fs.lstatSync('_data/videos/' + file);
-      moddt[file.replace(".yml", "")] = ss.mtime;
-    });
-        const data = new Uint8Array(Buffer.from(YAML.stringify(moddt)));
-        fs.writeFile('_data/sitemap.yml', data, (err) => {
-             if (err) throw err;
-                console.log('The file has been saved!');
-            cb();
-        });
-   
+    const regex = /last_modified_at: (.{1,25})/i;
     
+    filenames.forEach((file) => {
+        let videoDataFile = fs.lstatSync('_data/videos/' + file);
+        let fname = file.replace(".yml", ".md");
+        let fss = fs.readFileSync('_videos/'+ fname);
+        console.log(videoDataFile.mtime.toISOString());
+        fs.writeFileSync('_videos/'+ fname, fss.toString().replace(regex, "last_modified_at: " + videoDataFile.mtime.toISOString()));
+    });
+    cb();
 }
 
 function build(cb) {
-  // body omitted
   return src('assets/js/*.js')
     .pipe(babel())
     .pipe(uglify())
