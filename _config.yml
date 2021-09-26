@@ -16,4 +16,8 @@ defaults:
       path: "**/*.json"
     values:
       sitemap: false
-
+  -
+    scope:
+      path: "**/video-slider-template.html"
+    values:
+      sitemap: false
