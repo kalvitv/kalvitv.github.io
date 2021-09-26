@@ -9,3 +9,11 @@ plugins:
 collections:
   videos:
     output: true
+    
+defaults:
+  -
+    scope:
+      path: "**/*.json"
+    values:
+      sitemap: false
+
