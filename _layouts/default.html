@@ -31,9 +31,9 @@
   </main>
   <div class="container">
   <footer class="py-5">
-    <div class="row">
-      <div class="col-2">
-        <ul class="nav flex-column">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+      <div>
+        <ul class="nav flex-column ms-1">
           {% for item in site.data.main.Class limit:5 offset:0 %}
             <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: item.number | relative_url }}">
             {{ item.label }}</a></li>
@@ -41,8 +41,8 @@
         </ul>
       </div>
 
-      <div class="col-2">
-        <ul class="nav flex-column">
+      <div>
+        <ul class="nav flex-column ms-1">
           {% for item in site.data.main.Class limit:5 offset:5 %}    
             <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: item.number | relative_url }}">
             {{ item.label }}</a></li>
@@ -50,8 +50,8 @@
         </ul>
       </div>
 
-      <div class="col-2">
-        <ul class="nav flex-column">
+      <div>
+        <ul class="nav flex-column ms-1">
           {% for item in site.data.main.Class limit:5 offset:10 %}    
             <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="{{ '/class/' | append: item.number | relative_url }}">
             {{ item.label }}</a></li>
