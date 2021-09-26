@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minify": "gulp"
+    "minify": "gulp",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "gulp": "*",
     "gulp-babel": "*",
     "gulp-concat": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "yaml": "*"
   }
 }
