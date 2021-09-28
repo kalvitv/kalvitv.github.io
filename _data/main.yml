@@ -44,7 +44,6 @@ Class:
   -
     label: மற்றவை
     number: other
-    
 ClassLabel:
   1st:
     label: ஒன்றாம் வகுப்பு
